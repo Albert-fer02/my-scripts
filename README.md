@@ -3,7 +3,7 @@
 > Colección personal de scripts Bash organizados y documentados
 
 **Autor:** dreamcoder08  
-**Creado:** $(date '+%Y-%m-%d')  
+**Creado:** 2025-06-14
 **Plataforma:** Arch Linux  
 **Shell:** Bash/Zsh  
 
