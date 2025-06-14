@@ -1,0 +1,53 @@
+# ============================================================================
+# .gitignore para My Scripts Collection
+# ============================================================================
+
+# Logs y archivos temporales
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración local
+.env
+.env.local
+config.local
+
+# Directorios temporales
+/tmp/
+/temp/
+
+# Archivos de editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Archivos de salida
+output/
+results/
+*.out
+
+# Archivos sensibles (si los hubiera)
+sensitive_*
+*.key
+*.pem
+*.cert
+
+# Cachés
+.cache/
+*.cache
+
+# Archivos específicos del proyecto
+.multimedia_organizer.log
+
+# Archivos de test
+test_*
+proof_*
+
