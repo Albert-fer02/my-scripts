@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Protección: relanzar con bash si no está en bash
+if [ -z "$BASH_VERSION" ]; then
+    exec bash "$0" "$@"
+fi
+
 # ============================================================================
 # CALCULADORA BASH AVANZADA Y ROBUSTA
 # Versión: 2.0
@@ -87,7 +92,7 @@ validate_and_read_number() {
         
         if is_valid_number "$number"; then
             # Usar declare para asignar a variable dinámica
-            declare -g "$var_name"="$number"
+            eval "$var_name=\"$number\""
             break
         else
             log_error "\"$number\" no es un número válido."
@@ -197,6 +202,12 @@ perform_basic_operation() {
     
     validate_and_read_number "🔢 Primer número:" "num1"
     validate_and_read_number "🔢 Segundo número:" "num2"
+    
+    if [[ -z "$num1" || -z "$num2" ]]; then
+        log_error "Error interno: número no leído correctamente."
+        pause_and_continue
+        return 1
+    fi
     
     result=$(echo "scale=$PRECISION; $num1 $operator $num2" | bc -l)
     

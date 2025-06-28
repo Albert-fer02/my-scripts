@@ -2,7 +2,7 @@
 
 # ===============================================
 # Script de Instalación y Configuración Automática
-# Autor: Claude
+# Autor: DreamCoder06 
 # Fecha: 2024
 # Descripción: Script para instalar y configurar Zsh, Kitty, Fastfetch
 # y otras herramientas de forma automática
@@ -76,13 +76,21 @@ install_dependencies() {
         "neovim"
         "fzf"
         "fd"
+        "delta"
+        "duf"
+        "btop"
+        "xh"
         "ripgrep"
         "bat"
         "eza"
         "jq"
         "lsof"
         "fonts-powerline"  # Para los iconos de Powerlevel10k
-        "fonts-jetbrains-mono"  # Para la fuente JetBrains Mono
+        "fonts-jetbrains-mono"
+        "npm"
+        "python"
+        "docker"
+          # Para la fuente JetBrains Mono
     )
 
     # Instalar paquetes
